@@ -4,7 +4,7 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {toCreasedNormals} from 'three/addons/utils/BufferGeometryUtils.js';
 
-const BUILD = 'v1';
+const BUILD = 'v2';
 const $ = id => document.getElementById(id);
 const el = $('viewer'), Q = new URLSearchParams(location.search);
 const scene = new THREE.Scene();
@@ -18,8 +18,8 @@ const pm = new THREE.PMREMGenerator(r); scene.environment = pm.fromScene(new Roo
 const ctl = new OrbitControls(cam, r.domElement); ctl.enableDamping = true; ctl.minDistance = 160; ctl.maxDistance = 2500;
 
 // robot frame: x forward, y left, z up (mm)  ->  three: (x, z, -y)
-const TGT = new THREE.Vector3(30, 105, 0);
-const VIEWS = {front: [820, 150, 0], '34': [560, 330, -560], side: [0, 160, -820], back: [-820, 170, 0], top: [1, 900, 0]};
+const TGT = new THREE.Vector3(10, 100, 70);
+const VIEWS = {front: [860, 160, 70], '34': [600, 360, -520], side: [10, 170, -880], back: [-860, 180, 70], top: [11, 980, 70]};
 function setView(n) {
   const v = VIEWS[n] || VIEWS['34']; cam.position.set(...v); ctl.target.copy(TGT); ctl.update();
   document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('on', b.dataset.view === n));
@@ -131,10 +131,10 @@ function buildUI() {
   const L = $('labels');
   for (const lb of RI.labels) {
     const it = items[lb.key]; if (!it) continue;
-    const a = new THREE.Object3D(); a.position.fromArray(lb.local); (links[lb.node.slice(5)] || root).add(a);
+    const a = new THREE.Object3D(); a.position.fromArray(lb.local).sub(it.p0[0]); it.nodes[0].add(a);   // rides with the part when exploded
     const d = document.createElement('div'); d.className = 'lbl'; d.innerHTML = `<i></i><span>${it.title.replace(/ \(x\d\)$/, '')}</span>`;
     d.onclick = () => select([lb.key]); L.appendChild(d);
-    const ext = ['shell', 'dock'].includes(it.group) || ['elec:lcd', 'elec:tof', 'elec:irrx_l', 'elec:pogo_l', 'elec:camera'].includes(lb.key);
+    const ext = lb.key.startsWith('part:') || ['elec:lcd', 'elec:camera'].includes(lb.key);
     labels.push({a, d, it, ext, key: lb.key});
   }
   const s = RI.summary;

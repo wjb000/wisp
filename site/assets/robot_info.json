@@ -145,8 +145,8 @@
    "group": "dock",
    "color": "#2a2e35",
    "explode": [
-    60,
     0,
+    -40,
     0
    ],
    "kind": "printed",
@@ -549,8 +549,8 @@
    "group": "dock",
    "color": "#2c2c2c",
    "explode": [
-    60,
     0,
+    -40,
     0
    ],
    "kind": "modelled",
@@ -562,8 +562,8 @@
    "group": "dock",
    "color": "#552255",
    "explode": [
-    60,
     0,
+    -40,
     0
    ],
    "kind": "modelled",
@@ -575,8 +575,8 @@
    "group": "dock",
    "color": "#c87533",
    "explode": [
-    60,
     0,
+    -40,
     0
    ],
    "kind": "modelled",
@@ -588,8 +588,8 @@
    "group": "dock",
    "color": "#552255",
    "explode": [
-    60,
     0,
+    -40,
     0
    ],
    "kind": "modelled",
@@ -601,8 +601,8 @@
    "group": "dock",
    "color": "#c87533",
    "explode": [
-    60,
     0,
+    -40,
     0
    ],
    "kind": "modelled",
@@ -614,8 +614,8 @@
    "group": "dock",
    "color": "#777777",
    "explode": [
-    60,
     0,
+    -40,
     0
    ],
    "kind": "modelled",
