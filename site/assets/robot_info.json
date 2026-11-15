@@ -1,0 +1,906 @@
+{
+ "summary": {
+  "total_mass_g": 542,
+  "printed_parts": 7,
+  "height_mm": 219,
+  "diameter_mm": 151,
+  "unexpected_clashes": 0,
+  "tilt_clear": true,
+  "wag_clear": true,
+  "com_inside_support": true,
+  "print_grams": 379
+ },
+ "joints": {
+  "wheel_l": {
+   "node": "link:wheel_l",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "limits_deg": null
+  },
+  "wheel_r": {
+   "node": "link:wheel_r",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "limits_deg": null
+  },
+  "head_tilt": {
+   "node": "link:head",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "limits_deg": [
+    -10.0,
+    9.0
+   ]
+  },
+  "tail_wag": {
+   "node": "link:tail",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "limits_deg": [
+    -35.0,
+    35.0
+   ]
+  }
+ },
+ "items": {
+  "part:chassis": {
+   "title": "Chassis",
+   "desc": "Drive tub: floor, motor saddles, battery cradle, sensor windows. Hides the wheels.",
+   "group": "shell",
+   "color": "#2a2e35",
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "kind": "printed",
+   "material": "PETG (graphite)",
+   "translucent": false
+  },
+  "part:glow_ring": {
+   "title": "Light band",
+   "desc": "Translucent ring: mood light and night-light. The tail grows out of it.",
+   "group": "shell",
+   "color": "#ffe2b8",
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "kind": "printed",
+   "material": "PETG (natural/translucent)",
+   "translucent": true
+  },
+  "part:mantle": {
+   "title": "Mantle",
+   "desc": "Upper body shell with the neck collar and head-servo saddle built in.",
+   "group": "shell",
+   "color": "#efe9df",
+   "explode": [
+    0,
+    0,
+    55
+   ],
+   "kind": "printed",
+   "material": "PLA/PETG (bone white)",
+   "translucent": false
+  },
+  "part:dome": {
+   "title": "Head dome",
+   "desc": "One shell: hooded brow, round face window and the camera \"third eye\". Clear-smoke in production.",
+   "group": "shell",
+   "color": "#f4efe6",
+   "explode": [
+    0,
+    0,
+    95
+   ],
+   "kind": "printed",
+   "material": "PETG (bone white; clear-smoke when moulded)",
+   "translucent": false
+  },
+  "part:face_frame": {
+   "title": "Face frame",
+   "desc": "Inner frame that tilts with the head. Holds the eye screen, brain board and speaker.",
+   "group": "structure",
+   "color": "#16191e",
+   "explode": [
+    0,
+    0,
+    50
+   ],
+   "kind": "printed",
+   "material": "PETG (black)",
+   "translucent": false
+  },
+  "part:tail": {
+   "title": "Tail",
+   "desc": "Soft TPU tail on a micro servo: wags, perks up, droops.",
+   "group": "shell",
+   "color": "#ff7a45",
+   "explode": [
+    -45,
+    0,
+    40
+   ],
+   "kind": "printed",
+   "material": "TPU 95A (coral)",
+   "translucent": false
+  },
+  "part:dock": {
+   "title": "Dock",
+   "desc": "Crescent charger with two copper pads and an IR homing beacon.",
+   "group": "dock",
+   "color": "#2a2e35",
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "kind": "printed",
+   "material": "PETG (graphite)",
+   "translucent": false
+  },
+  "elec:motor_l": {
+   "title": "N20 gearmotor 75:1 + magnetic encoder",
+   "desc": "Pololu 75:1 Micro Metal Gearmotor MP 6V, extended shaft, run at 5 V: ~0.8 m/s top speed on 60 mm wheels; 12 CPR magnetic encoder (x75 = 900 counts per wheel turn).",
+   "group": "drivetrain",
+   "color": "#b8bcc4",
+   "explode": [
+    0,
+    22,
+    8
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:bracket_l": {
+   "title": "Micro metal gearmotor bracket",
+   "desc": "Pololu bracket pair: two M2 screws each into the chassis saddles.",
+   "group": "structure",
+   "color": "#20242a",
+   "explode": [
+    0,
+    22,
+    20
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:motor_r": {
+   "title": "N20 gearmotor 75:1 + magnetic encoder",
+   "desc": "Pololu 75:1 Micro Metal Gearmotor MP 6V, extended shaft, run at 5 V: ~0.8 m/s top speed on 60 mm wheels; 12 CPR magnetic encoder (x75 = 900 counts per wheel turn).",
+   "group": "drivetrain",
+   "color": "#b8bcc4",
+   "explode": [
+    0,
+    -22,
+    8
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:bracket_r": {
+   "title": "Micro metal gearmotor bracket",
+   "desc": "Pololu bracket pair: two M2 screws each into the chassis saddles.",
+   "group": "structure",
+   "color": "#20242a",
+   "explode": [
+    0,
+    -22,
+    20
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:wheel_l": {
+   "title": "Wheel 60 x 8 mm",
+   "desc": "Pololu 60 x 8 mm wheel pair, silicone tyre, press-fit on the 3 mm D-shaft. Wheels sit inside the body: Wisp glides, no visible wheels.",
+   "group": "drivetrain",
+   "color": "#1b1d21",
+   "explode": [
+    0,
+    45,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:wheel_r": {
+   "title": "Wheel 60 x 8 mm",
+   "desc": "",
+   "group": "drivetrain",
+   "color": "#1b1d21",
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:battery": {
+   "title": "Li-ion pack 3.7 V 4400 mAh (2 x 18650)",
+   "desc": "16 Wh, with protection PCB. Stands on edge behind the axle to keep the centre of mass low and between the wheels and the caster. ~3 h roaming, ~10 h idle-watching (estimate).",
+   "group": "power",
+   "color": "#3b6fb6",
+   "explode": [
+    -10,
+    0,
+    25
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:pico": {
+   "title": "Raspberry Pi Pico (body controller)",
+   "desc": "The \"spinal cord\": 1 kHz wheel speed loops, odometry, cliff + bump reflexes, IR dock homing, servos, light band. Talks to the head over UART at 921600 baud.",
+   "group": "electronics",
+   "color": "#2f8f4e",
+   "explode": [
+    0,
+    0,
+    18
+   ],
+   "kind": "vendor",
+   "emissive": false
+  },
+  "elec:drv8833": {
+   "title": "DRV8833 dual motor driver",
+   "desc": "2 x 1.2 A H-bridges, PWM from the Pico; rides on top of the Pico.",
+   "group": "electronics",
+   "color": "#1f5fa8",
+   "explode": [
+    0,
+    0,
+    18
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:boost": {
+   "title": "5 V 4 A boost regulator",
+   "desc": "Battery (3.0-4.2 V) to 5 V for motors, servos, LEDs and both boards.",
+   "group": "power",
+   "color": "#1f5fa8",
+   "explode": [
+    0,
+    0,
+    18
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:charger": {
+   "title": "bq24074 charger / power path",
+   "desc": "1.5 A Li-ion charging from the dock pins or rear USB-C; runs the robot while charging. Sits on a bridge over the battery.",
+   "group": "power",
+   "color": "#1a1a1a",
+   "explode": [
+    0,
+    0,
+    18
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:tof": {
+   "title": "VL53L7CX 8 x 8 time-of-flight sensor",
+   "desc": "64-zone depth at 15-60 Hz, 90 deg field of view, 4 m: obstacle and drop-off map in front of the robot, tilted 5 deg down.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "explode": [
+    25,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:irrx_l": {
+   "title": "TSOP38238 IR receiver (x2)",
+   "desc": "38 kHz receivers, +-25 deg: read the dock's left / right beam codes to home in.",
+   "group": "sensors",
+   "color": "#111111",
+   "explode": [
+    22,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:irrx_r": {
+   "title": "TSOP38238 IR receiver (x2)",
+   "desc": "38 kHz receivers, +-25 deg: read the dock's left / right beam codes to home in.",
+   "group": "sensors",
+   "color": "#111111",
+   "explode": [
+    22,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:cliff_0": {
+   "title": "QTR-1RC cliff sensor (x3)",
+   "desc": "IR reflectance under the floor: a drop under any sensor stops the wheels in < 5 ms (Pico reflex, not the brain).",
+   "group": "sensors",
+   "color": "#1f5fa8",
+   "explode": [
+    0,
+    0,
+    -15
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:cliff_1": {
+   "title": "QTR-1RC cliff sensor (x3)",
+   "desc": "IR reflectance under the floor: a drop under any sensor stops the wheels in < 5 ms (Pico reflex, not the brain).",
+   "group": "sensors",
+   "color": "#1f5fa8",
+   "explode": [
+    0,
+    0,
+    -15
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:cliff_2": {
+   "title": "QTR-1RC cliff sensor (x3)",
+   "desc": "IR reflectance under the floor: a drop under any sensor stops the wheels in < 5 ms (Pico reflex, not the brain).",
+   "group": "sensors",
+   "color": "#1f5fa8",
+   "explode": [
+    0,
+    0,
+    -15
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:imu": {
+   "title": "LSM6DS3TR-C 6-axis IMU",
+   "desc": "Heading for odometry, bump / pick-up / tip detection (\"put me down!\").",
+   "group": "electronics",
+   "color": "#1a1a1a",
+   "explode": [
+    0,
+    0,
+    18
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:pogo_l": {
+   "title": "Pogo charging contacts (x2)",
+   "desc": "Spring pins at the front skirt meet two copper pads in the dock: 5 V in.",
+   "group": "power",
+   "color": "#d4a017",
+   "explode": [
+    25,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:pogo_r": {
+   "title": "Pogo charging contacts (x2)",
+   "desc": "Spring pins at the front skirt meet two copper pads in the dock: 5 V in.",
+   "group": "power",
+   "color": "#d4a017",
+   "explode": [
+    25,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:caster": {
+   "title": "Ball caster 3/8\"",
+   "desc": "Rear support point. Plastic ball.",
+   "group": "drivetrain",
+   "color": "#888888",
+   "explode": [
+    0,
+    0,
+    -25
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:servo_tail": {
+   "title": "Tail servo SG92R",
+   "desc": "+-35 deg wag at up to 4 Hz: happy, curious, sleepy, alert.",
+   "group": "expression",
+   "color": "#2b5fb0",
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:ledstrip": {
+   "title": "Light band: 13 RGB LEDs",
+   "desc": "Addressable LEDs behind the translucent band: mood, battery, listening, and a soft night-light.",
+   "group": "expression",
+   "color": "#ffb347",
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "kind": "modelled",
+   "emissive": true
+  },
+  "elec:servo_head": {
+   "title": "Head tilt servo MG92B (metal gear)",
+   "desc": "Nods the head -20/+15 deg: looks up at you, down at the floor or the cat.",
+   "group": "expression",
+   "color": "#2b5fb0",
+   "explode": [
+    0,
+    0,
+    55
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:lcd": {
+   "title": "1.28\" round IPS LCD (240 x 240)",
+   "desc": "GC9A01 round display: the eye. Iris, lids and glyphs are drawn by the head at 30 fps.",
+   "group": "expression",
+   "color": "#0b0d10",
+   "explode": [
+    0,
+    0,
+    50
+   ],
+   "kind": "modelled",
+   "emissive": true
+  },
+  "elec:xiao": {
+   "title": "XIAO ESP32-S3 Sense (head brain)",
+   "desc": "Dual-core 240 MHz + 8 MB PSRAM: personality engine, on-device wake word (ESP-SR), person / face detection (ESP-DL), the eye animation, Wi-Fi check-in video.",
+   "group": "electronics",
+   "color": "#2c2c2c",
+   "explode": [
+    0,
+    0,
+    50
+   ],
+   "kind": "vendor",
+   "emissive": false
+  },
+  "elec:camera": {
+   "title": "OV3660 camera (on the XIAO Sense)",
+   "desc": "3 MP, sits behind the brow lens hole; tilts with the head.",
+   "group": "sensors",
+   "color": "#111111",
+   "explode": [
+    0,
+    0,
+    50
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:amp": {
+   "title": "MAX98357A I2S amplifier",
+   "desc": "3 W class-D from the head's I2S port.",
+   "group": "electronics",
+   "color": "#1a1a1a",
+   "explode": [
+    0,
+    0,
+    50
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:speaker": {
+   "title": "Speaker 30 x 20 mm, 1 W",
+   "desc": "Chirps, purrs and a speaking voice; fires through the chin slots.",
+   "group": "expression",
+   "color": "#444444",
+   "explode": [
+    0,
+    0,
+    50
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:mic": {
+   "title": "PDM microphone (on the XIAO Sense)",
+   "desc": "Wake word and sound events (glass break, dog bark: designed, not trained).",
+   "group": "sensors",
+   "color": "#999999",
+   "explode": [
+    0,
+    0,
+    50
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:dock_mcu": {
+   "title": "Dock beacon: XIAO ESP32-C3",
+   "desc": "Pulses two 940 nm IR LEDs with left / right codes on a 38 kHz carrier, and powers the pads.",
+   "group": "dock",
+   "color": "#2c2c2c",
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:dock_led_1": {
+   "title": "IR LED 940 nm (x2)",
+   "desc": "Split by the baffle so the beams only overlap on the centre line.",
+   "group": "dock",
+   "color": "#552255",
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:dock_pad_1": {
+   "title": "Copper contact pads (x2)",
+   "desc": "5 V from a USB-C supply through the dock to the robot's pogo pins.",
+   "group": "dock",
+   "color": "#c87533",
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:dock_led_-1": {
+   "title": "IR LED 940 nm (x2)",
+   "desc": "Split by the baffle so the beams only overlap on the centre line.",
+   "group": "dock",
+   "color": "#552255",
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:dock_pad_-1": {
+   "title": "Copper contact pads (x2)",
+   "desc": "5 V from a USB-C supply through the dock to the robot's pogo pins.",
+   "group": "dock",
+   "color": "#c87533",
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  },
+  "elec:dock_usb": {
+   "title": "USB-C inlet",
+   "desc": "Any 5 V / 2 A USB-C supply.",
+   "group": "dock",
+   "color": "#777777",
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "kind": "modelled",
+   "emissive": false
+  }
+ },
+ "labels": [
+  {
+   "key": "part:chassis",
+   "node": "link:base",
+   "local": [
+    40.0,
+    -60.0,
+    30.0
+   ]
+  },
+  {
+   "key": "part:glow_ring",
+   "node": "link:base",
+   "local": [
+    52.0,
+    54.0,
+    63.0
+   ]
+  },
+  {
+   "key": "part:mantle",
+   "node": "link:base",
+   "local": [
+    38.0,
+    52.0,
+    98.0
+   ]
+  },
+  {
+   "key": "part:dome",
+   "node": "link:head",
+   "local": [
+    28.0,
+    34.0,
+    74.55172413793105
+   ]
+  },
+  {
+   "key": "part:face_frame",
+   "node": "link:head",
+   "local": [
+    25.0,
+    -24.0,
+    9.0
+   ]
+  },
+  {
+   "key": "part:tail",
+   "node": "link:tail",
+   "local": [
+    -52.0,
+    0.0,
+    62.0
+   ]
+  },
+  {
+   "key": "part:dock",
+   "node": "link:dock",
+   "local": [
+    86.0,
+    -45.0,
+    28.0
+   ]
+  },
+  {
+   "key": "elec:motor_l",
+   "node": "link:base",
+   "local": [
+    12.0,
+    32.25,
+    30.0
+   ]
+  },
+  {
+   "key": "elec:wheel_l",
+   "node": "link:wheel_l",
+   "local": [
+    0.0,
+    0.5,
+    0.0
+   ]
+  },
+  {
+   "key": "elec:battery",
+   "node": "link:base",
+   "local": [
+    -29.75,
+    0.0,
+    28.9
+   ]
+  },
+  {
+   "key": "elec:pico",
+   "node": "link:base",
+   "local": [
+    30.5,
+    0.0,
+    16.765000000000004
+   ]
+  },
+  {
+   "key": "elec:drv8833",
+   "node": "link:base",
+   "local": [
+    40.15,
+    -0.05000000000000071,
+    24.2
+   ]
+  },
+  {
+   "key": "elec:boost",
+   "node": "link:base",
+   "local": [
+    33.6,
+    -28.55,
+    15.899999999999999
+   ]
+  },
+  {
+   "key": "elec:charger",
+   "node": "link:base",
+   "local": [
+    -16.0,
+    0.0,
+    49.9
+   ]
+  },
+  {
+   "key": "elec:tof",
+   "node": "link:base",
+   "local": [
+    67.75,
+    0.0,
+    46.0
+   ]
+  },
+  {
+   "key": "elec:irrx_l",
+   "node": "link:base",
+   "local": [
+    63.35702144021735,
+    29.40201676444163,
+    48.0
+   ]
+  },
+  {
+   "key": "elec:cliff_0",
+   "node": "link:base",
+   "local": [
+    56.0,
+    30.0,
+    9.600000000000001
+   ]
+  },
+  {
+   "key": "elec:imu",
+   "node": "link:base",
+   "local": [
+    -8.0,
+    0.0,
+    15.2
+   ]
+  },
+  {
+   "key": "elec:pogo_l",
+   "node": "link:base",
+   "local": [
+    69.75,
+    12.0,
+    16.0
+   ]
+  },
+  {
+   "key": "elec:caster",
+   "node": "link:base",
+   "local": [
+    -56.0,
+    0.0,
+    5.0
+   ]
+  },
+  {
+   "key": "elec:servo_tail",
+   "node": "link:base",
+   "local": [
+    -52.6,
+    0.0,
+    48.2
+   ]
+  },
+  {
+   "key": "elec:ledstrip",
+   "node": "link:base",
+   "local": [
+    1.3632581451697376,
+    7.105427357601002e-15,
+    63.00000000000001
+   ]
+  },
+  {
+   "key": "elec:servo_head",
+   "node": "link:base",
+   "local": [
+    -5.6,
+    15.45,
+    122.0
+   ]
+  },
+  {
+   "key": "elec:lcd",
+   "node": "link:head",
+   "local": [
+    48.3,
+    0.0,
+    36.551724137931046
+   ]
+  },
+  {
+   "key": "elec:xiao",
+   "node": "link:head",
+   "local": [
+    41.23000000000015,
+    -8.881784197001252e-15,
+    61.55172413793102
+   ]
+  },
+  {
+   "key": "elec:camera",
+   "node": "link:head",
+   "local": [
+    43.3,
+    0.0,
+    69.55172413793105
+   ]
+  },
+  {
+   "key": "elec:amp",
+   "node": "link:head",
+   "local": [
+    37.0,
+    0.0,
+    21.0
+   ]
+  },
+  {
+   "key": "elec:speaker",
+   "node": "link:head",
+   "local": [
+    22.0,
+    0.0,
+    12.5
+   ]
+  },
+  {
+   "key": "elec:dock_mcu",
+   "node": "link:dock",
+   "local": [
+    83.0,
+    0.0,
+    13.5
+   ]
+  },
+  {
+   "key": "elec:dock_led_1",
+   "node": "link:dock",
+   "local": [
+    83.25,
+    4.5,
+    29.0
+   ]
+  },
+  {
+   "key": "elec:dock_pad_1",
+   "node": "link:dock",
+   "local": [
+    78.3,
+    12.0,
+    16.0
+   ]
+  }
+ ]
+}
