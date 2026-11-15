@@ -1,0 +1,86 @@
+{
+ "chassis": {
+  "material": "PETG (graphite)",
+  "grams": 116.6,
+  "bbox_mm": [
+   151.0,
+   151.0,
+   50.1
+  ],
+  "fits_256_bed": true,
+  "est_print_h": 13.0,
+  "supports": false
+ },
+ "glow_ring": {
+  "material": "PETG (natural/translucent)",
+  "grams": 12.7,
+  "bbox_mm": [
+   151.0,
+   151.0,
+   10.0
+  ],
+  "fits_256_bed": true,
+  "est_print_h": 1.4,
+  "supports": false
+ },
+ "mantle": {
+  "material": "PLA/PETG (bone white)",
+  "grams": 72.0,
+  "bbox_mm": [
+   150.5,
+   151.0,
+   60.2
+  ],
+  "fits_256_bed": true,
+  "est_print_h": 8.0,
+  "supports": true
+ },
+ "dome": {
+  "material": "PETG (bone white; clear-smoke when moulded)",
+  "grams": 82.7,
+  "bbox_mm": [
+   117.3,
+   115.2,
+   96.0
+  ],
+  "fits_256_bed": true,
+  "est_print_h": 9.2,
+  "supports": false
+ },
+ "face_frame": {
+  "material": "PETG (black)",
+  "grams": 20.7,
+  "bbox_mm": [
+   81.0,
+   63.0,
+   54.0
+  ],
+  "fits_256_bed": true,
+  "est_print_h": 2.3,
+  "supports": true
+ },
+ "tail": {
+  "material": "TPU 95A (coral)",
+  "grams": 8.1,
+  "bbox_mm": [
+   70.5,
+   75.1,
+   15.0
+  ],
+  "fits_256_bed": true,
+  "est_print_h": 0.9,
+  "supports": false
+ },
+ "dock": {
+  "material": "PETG (graphite)",
+  "grams": 66.6,
+  "bbox_mm": [
+   84.4,
+   140.0,
+   38.0
+  ],
+  "fits_256_bed": true,
+  "est_print_h": 7.4,
+  "supports": false
+ }
+}
