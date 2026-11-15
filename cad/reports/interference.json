@@ -1,0 +1,132 @@
+{
+ "home_pose_contacts": [
+  {
+   "a": "glow_ring",
+   "b": "mantle",
+   "mm3": 59.4,
+   "allowed": true
+  },
+  {
+   "a": "mantle",
+   "b": "servo_head",
+   "mm3": 96.0,
+   "allowed": true
+  },
+  {
+   "a": "dome",
+   "b": "face_frame",
+   "mm3": 118.7,
+   "allowed": true
+  },
+  {
+   "a": "face_frame",
+   "b": "xiao",
+   "mm3": 59.8,
+   "allowed": true
+  },
+  {
+   "a": "tail",
+   "b": "servo_tail",
+   "mm3": 2.5,
+   "allowed": true
+  },
+  {
+   "a": "motor_l",
+   "b": "wheel_l",
+   "mm3": 56.5,
+   "allowed": true
+  },
+  {
+   "a": "motor_r",
+   "b": "wheel_r",
+   "mm3": 63.6,
+   "allowed": true
+  },
+  {
+   "a": "xiao",
+   "b": "camera",
+   "mm3": 78.6,
+   "allowed": true
+  }
+ ],
+ "unexpected": [],
+ "head_tilt_sweep": [
+  {
+   "deg": -10.0,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": -7.3,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": -4.6,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": -1.9,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": 0.9,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": 3.6,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": 6.3,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": 9.0,
+   "clash_mm3": 0.0,
+   "pair": "face_frame/mantle"
+  }
+ ],
+ "tail_wag_sweep": [
+  {
+   "deg": -35.0,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": -23.3,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": -11.7,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": 0.0,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": 11.7,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": 23.3,
+   "clash_mm3": 0.0,
+   "pair": null
+  },
+  {
+   "deg": 35.0,
+   "clash_mm3": 0.0,
+   "pair": null
+  }
+ ]
+}
