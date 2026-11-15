@@ -1,0 +1,11 @@
+{
+ "total_mass_g": 542,
+ "printed_parts": 7,
+ "height_mm": 219,
+ "diameter_mm": 151,
+ "unexpected_clashes": 0,
+ "tilt_clear": true,
+ "wag_clear": true,
+ "com_inside_support": true,
+ "print_grams": 379
+}
